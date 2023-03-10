@@ -1,9 +1,9 @@
 Request method:	POST
-Request URI:	https://gitlab.com/api/v4/projects/44118042/issues?title=Issue%20with%20authentication&description=bug
+Request URI:	https://gitlab.com/api/v4/projects/44118042/issues?title=new%20issue%20Title&description=new%20description
 Proxy:			<none>
 Request params:	<none>
-Query params:	title=Issue with authentication
-				description=bug
+Query params:	title=new issue Title
+				description=new description
 Form params:	<none>
 Path params:	<none>
 Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
@@ -13,43 +13,43 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 201 Created
-Date: Fri, 10 Mar 2023 04:34:25 GMT
+Date: Fri, 10 Mar 2023 12:05:58 GMT
 Content-Type: application/json
-Content-Length: 1562
+Content-Length: 1564
 Connection: keep-alive
 Cache-Control: max-age=0, private, must-revalidate
 Content-Security-Policy: default-src 'none'
-Etag: W/"0335b261214421a62d969170460da879"
+Etag: W/"e8f68dafe387f8213c67bfc7ebb6ac8d"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 0e1fadf679fe878f78caf2549fb4acae
-X-Runtime: 0.782241
+X-Request-Id: 64e2033bea315c4218e5effd6d4f2089
+X-Runtime: 0.617138
 Strict-Transport-Security: max-age=31536000
 Referrer-Policy: strict-origin-when-cross-origin
-RateLimit-Observed: 3
-RateLimit-Remaining: 1997
-RateLimit-Reset: 1678422925
-RateLimit-ResetTime: Fri, 10 Mar 2023 04:35:25 GMT
+RateLimit-Observed: 1
+RateLimit-Remaining: 1999
+RateLimit-Reset: 1678450018
+RateLimit-ResetTime: Fri, 10 Mar 2023 12:06:58 GMT
 RateLimit-Limit: 2000
-GitLab-LB: fe-03-lb-gprd
+GitLab-LB: fe-25-lb-gprd
 GitLab-SV: localhost
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=0mobu%2FjO9NiCkEdM5h2s5V77Dw8q1gKylXhfkUG0hoq48iBtSGULbLzUezDAGl1vIlNOArOebrP8HqR2NBk4R15lWzCwYJuht0LsckFHVKm5eU%2FVlSBq5nW0VkA%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nq0aX6Fr69MlOVCHWkLdHTyRXfI%2FL4QqUHdBhbgQ6jGo16XjZ2qYSvRnEWeUgEApZ3Cg2ib4b0ikHSa8JeErVuXH%2BqCM%2BM9Z3XrZmt9TK%2FbfPR%2FJV93TM8aSRXI%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
-Set-Cookie: _cfuvid=IzJDbEaHyE0SU7EGY_d0XnjqDjo0eBgepqX0oLmLgjk-1678422865913-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Set-Cookie: _cfuvid=S6R95DCOgReTuVk6gyb5o.OLPPXCD3gYW4MKi3wzVr8-1678449958763-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
 Server: cloudflare
-CF-RAY: 7a58d85a185db72b-AMS
+CF-RAY: 7a5b6dcc78c4b87e-AMS
 
 {
-    "id": 125076572,
-    "iid": 32,
+    "id": 125097854,
+    "iid": 66,
     "project_id": 44118042,
-    "title": "Issue with authentication",
-    "description": "bug",
+    "title": "new issue Title",
+    "description": "new description",
     "state": "opened",
-    "created_at": "2023-03-10T04:34:25.624Z",
-    "updated_at": "2023-03-10T04:34:25.624Z",
+    "created_at": "2023-03-10T12:05:58.517Z",
+    "updated_at": "2023-03-10T12:05:58.517Z",
     "closed_at": null,
     "closed_by": null,
     "labels": [
@@ -77,7 +77,7 @@ CF-RAY: 7a58d85a185db72b-AMS
     "confidential": false,
     "discussion_locked": null,
     "issue_type": "issue",
-    "web_url": "https://gitlab.com/sqrlabs/s23-lab2-linter-and-sonar-as-a-part-of-qg/-/issues/32",
+    "web_url": "https://gitlab.com/sqrlabs/s23-lab2-linter-and-sonar-as-a-part-of-qg/-/issues/66",
     "time_stats": {
         "time_estimate": 0,
         "total_time_spent": 0,
@@ -92,16 +92,16 @@ CF-RAY: 7a58d85a185db72b-AMS
     "has_tasks": true,
     "task_status": "0 of 0 checklist items completed",
     "_links": {
-        "self": "https://gitlab.com/api/v4/projects/44118042/issues/32",
-        "notes": "https://gitlab.com/api/v4/projects/44118042/issues/32/notes",
-        "award_emoji": "https://gitlab.com/api/v4/projects/44118042/issues/32/award_emoji",
+        "self": "https://gitlab.com/api/v4/projects/44118042/issues/66",
+        "notes": "https://gitlab.com/api/v4/projects/44118042/issues/66/notes",
+        "award_emoji": "https://gitlab.com/api/v4/projects/44118042/issues/66/award_emoji",
         "project": "https://gitlab.com/api/v4/projects/44118042",
         "closed_as_duplicate_of": null
     },
     "references": {
-        "short": "#32",
-        "relative": "#32",
-        "full": "sqrlabs/s23-lab2-linter-and-sonar-as-a-part-of-qg#32"
+        "short": "#66",
+        "relative": "#66",
+        "full": "sqrlabs/s23-lab2-linter-and-sonar-as-a-part-of-qg#66"
     },
     "severity": "UNKNOWN",
     "subscribed": true,
@@ -109,11 +109,11 @@ CF-RAY: 7a58d85a185db72b-AMS
     "service_desk_reply_to": null
 }
 Request method:	POST
-Request URI:	https://gitlab.com/api/v4/projects/44118042/issues?title=Issue%20with%20authentication&description=bug
+Request URI:	https://gitlab.com/api/v4/projects/44118042/issues/66/clone?with_notes=true&to_project_id=44118659
 Proxy:			<none>
 Request params:	<none>
-Query params:	title=Issue with authentication
-				description=bug
+Query params:	with_notes=true
+				to_project_id=44118659
 Form params:	<none>
 Path params:	<none>
 Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
@@ -122,99 +122,34 @@ Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-HTTP/1.1 201 Created
-Date: Fri, 10 Mar 2023 04:34:27 GMT
+HTTP/1.1 400 Bad Request
+Date: Fri, 10 Mar 2023 12:05:59 GMT
 Content-Type: application/json
-Content-Length: 1562
+Content-Length: 65
 Connection: keep-alive
-Cache-Control: max-age=0, private, must-revalidate
+Cache-Control: no-cache
 Content-Security-Policy: default-src 'none'
-Etag: W/"956eec9a8db39765a70605e850039c7e"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: c45b1b0d445f62b78886040e1ddc472d
-X-Runtime: 0.882869
+X-Request-Id: 001fb3618b16e7bdde70edc89a8b11b9
+X-Runtime: 0.071372
 Strict-Transport-Security: max-age=31536000
 Referrer-Policy: strict-origin-when-cross-origin
-RateLimit-Observed: 4
-RateLimit-Remaining: 1996
-RateLimit-Reset: 1678422927
-RateLimit-ResetTime: Fri, 10 Mar 2023 04:35:27 GMT
+RateLimit-Observed: 1
+RateLimit-Remaining: 1999
+RateLimit-Reset: 1678450019
+RateLimit-ResetTime: Fri, 10 Mar 2023 12:06:59 GMT
 RateLimit-Limit: 2000
-GitLab-LB: fe-35-lb-gprd
+GitLab-LB: fe-31-lb-gprd
 GitLab-SV: localhost
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xNjFcuW6z%2BAomBI36bT0yZh2MReMFQ8MA4vbrJ%2B6nnRjBUZq5R5nmyERtBtn0rSAW0zAwcBBz5XC9Y6ZmWM1PuDbuG1QEkyZJxkbIPwpJZLMt79a%2BbjW3gTDEqc%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=qXgeGZux4pwx6D%2BH5OZgreVmo1qaU4GGCuoX2hlDnWmOetWVYrc9XpcNr0Cyq0XbXBUxNj7nsZNcnAUWA8oF%2FEBGmtyrlbdEy%2FyYw6v3w3En%2FGnwmopqlMjLenE%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
-Set-Cookie: _cfuvid=d_peChkGUOXAEPx7AYL.LCcU76018cPylW56NikrIes-1678422867422-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Set-Cookie: _cfuvid=lLTq7hxy5sy5w0QlONfibj041w_6cf0H_G2a0K_qj9Y-1678449959278-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
 Server: cloudflare
-CF-RAY: 7a58d861ca13b879-AMS
+CF-RAY: 7a5b6dd42f2c0a74-AMS
 
 {
-    "id": 125076573,
-    "iid": 33,
-    "project_id": 44118042,
-    "title": "Issue with authentication",
-    "description": "bug",
-    "state": "opened",
-    "created_at": "2023-03-10T04:34:27.017Z",
-    "updated_at": "2023-03-10T04:34:27.017Z",
-    "closed_at": null,
-    "closed_by": null,
-    "labels": [
-        
-    ],
-    "milestone": null,
-    "assignees": [
-        
-    ],
-    "author": {
-        "id": 5224296,
-        "username": "shibaharn",
-        "name": "Shibahar Nagarajan",
-        "state": "active",
-        "avatar_url": "https://secure.gravatar.com/avatar/8b4aa67db1d45da8a09e8729d10b1cc3?s=80&d=identicon",
-        "web_url": "https://gitlab.com/shibaharn"
-    },
-    "type": "ISSUE",
-    "assignee": null,
-    "user_notes_count": 0,
-    "merge_requests_count": 0,
-    "upvotes": 0,
-    "downvotes": 0,
-    "due_date": null,
-    "confidential": false,
-    "discussion_locked": null,
-    "issue_type": "issue",
-    "web_url": "https://gitlab.com/sqrlabs/s23-lab2-linter-and-sonar-as-a-part-of-qg/-/issues/33",
-    "time_stats": {
-        "time_estimate": 0,
-        "total_time_spent": 0,
-        "human_time_estimate": null,
-        "human_total_time_spent": null
-    },
-    "task_completion_status": {
-        "count": 0,
-        "completed_count": 0
-    },
-    "blocking_issues_count": 0,
-    "has_tasks": true,
-    "task_status": "0 of 0 checklist items completed",
-    "_links": {
-        "self": "https://gitlab.com/api/v4/projects/44118042/issues/33",
-        "notes": "https://gitlab.com/api/v4/projects/44118042/issues/33/notes",
-        "award_emoji": "https://gitlab.com/api/v4/projects/44118042/issues/33/award_emoji",
-        "project": "https://gitlab.com/api/v4/projects/44118042",
-        "closed_as_duplicate_of": null
-    },
-    "references": {
-        "short": "#33",
-        "relative": "#33",
-        "full": "sqrlabs/s23-lab2-linter-and-sonar-as-a-part-of-qg#33"
-    },
-    "severity": "UNKNOWN",
-    "subscribed": true,
-    "moved_to_id": null,
-    "service_desk_reply_to": null
+    "message": "Cannot clone issue due to insufficient permissions!"
 }

@@ -48,35 +48,92 @@ public class StepDefinition extends Utils {
     @When("User creates new issue with {string} and {string}")
     public void user_creates_new_issue_with_and(String issueTitle, String description) {
 
-       // responseSpec = new ResponseSpecBuilder().expectStatusCode(201).expectContentType(ContentType.JSON).build();
-//
-//        response = reqObj.queryParam("title",issueTitle)
-//                .queryParam("labels",label).when().post().then().spec(responseSpec).log().all().extract().response();
-
-
         response = reqObj.queryParam("title",issueTitle)
                 .queryParam("description",description).when().post();
 
     }
 
-    @Then("Validate the {int} from output respose")
-    public void validate_the_from_output_respose(Integer statusCode) {
-        responseSpec = new ResponseSpecBuilder().expectStatusCode(201).expectContentType(ContentType.JSON).build();
+//    @Then("Validate the {int} from output response")
+//    public void validate_the_from_output_response(Integer statusCode) {
+//        responseSpec = new ResponseSpecBuilder().expectStatusCode(statusCode).expectContentType(ContentType.JSON).build();
+//        response =response.then().spec(responseSpec).log().all().extract().response();
+//        assertEquals(response.getStatusCode(), (int) statusCode);
+//    }
+
+    @Then("Validate the {int} from output response")
+    public void validate_the_from_output_response(Integer statusCode) {
+
+        responseSpec = new ResponseSpecBuilder().expectStatusCode(statusCode).expectContentType(ContentType.JSON).build();
         response =response.then().spec(responseSpec).log().all().extract().response();
         assertEquals(response.getStatusCode(), (int) statusCode);
     }
 
 
-    @Then("Extract the response and store the issueid")
-    public void extract_the_response_and_store_the_issueid() {
+//    @Then("Extract the response and store the issueid")
+//    public void extract_the_response_and_store_the_issueid() {
+//
+//        issueIid = getJsonPath(response,"iid");
+//        System.out.println("iid " + issueIid);
+//
+//    }
 
+    @Then("Extract the response and store the issue_id")
+    public void extract_the_response_and_store_the_issue_id() {
 
-        String res = response.asString();
-        JsonPath js = new JsonPath(res);
-        issueIid = js.get("iid").toString();
+        issueIid = getJsonPath(response,"iid");
         System.out.println("iid " + issueIid);
+    }
+
+    @Then("Verify the {string} and {string} in output response")
+    public void verify_the_and_in_output_response(String expectedTitle, String expectedDescription) {
+
+        String actualTitle=getJsonPath(response,"title");
+        String actualDescription = getJsonPath(response,"description");
+        assertEquals(expectedTitle,actualTitle);
+        assertEquals(expectedDescription,actualDescription);
+        System.out.println("Assertion Passed");
 
     }
+
+    @When("User update the existing issue {string} and {string}")
+    public void user_update_the_existing_issue_and(String title, String description) {
+
+        response = reqObj.queryParam("title",title)
+                .queryParam("description",description).when().put(("/"+issueIid+""));
+
+    }
+
+
+    @When("User deletes the existing gitlab issue")
+    public void user_deletes_the_existing_gitlab_issue() {
+        response = reqObj
+                .when().delete(("/"+issueIid+""));
+    }
+
+
+    @When("User moves an issue to {string}")
+    public void user_moves_an_issue_to(String newProjectId) {
+        response = reqObj.contentType("multipart/form-data")
+                .multiPart("to_project_id", newProjectId)
+                .when().post(("/"+issueIid+"/move"));
+
+    }
+
+
+
+    @When("User clone the issue with {string} and {string}")
+    public void user_clone_the_issue_with_and(String notes, String newProjectId) {
+        response = reqObj
+                .queryParam("with_notes",notes)
+                .queryParam("to_project_id",newProjectId)
+                .when().post(("/"+issueIid+"/clone"));
+
+
+    }
+
+
+    //****************************
+
 
 
 

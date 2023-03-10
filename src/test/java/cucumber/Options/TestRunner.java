@@ -11,7 +11,7 @@ import utilities.Email;
 import java.io.IOException;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(publish = true,features="src/test/java/features",plugin ="json:target/jsonReports/cucumber-report.json",glue= {"stepDefinitions"},tags="@Regression")  //CreatePetWithPayload //Regression
+@CucumberOptions(publish = true,features="src/test/java/features",plugin ="json:target/jsonReports/cucumber-report.json",glue= {"stepDefinitions"},tags="@EdgeCase")  //CreatePetWithPayload //Regression
 //CreatePetWithPayload or DeletePetWithId or UpdatePetwithPayload
 
 public class TestRunner {

@@ -1,40 +1,78 @@
 Feature: Validating Gitlab issues Api
+#
+#  @Crud
+#  Scenario Outline: Create new issue in gitlab using API
+#
+#    Given Setting up the request specification for gitlab issues api
+#    When  User creates new issue with "<title>" and "<description>"
+#    Then  Validate the <status_code> from output response
+#    And   Extract the response and store the issue_id
+#
+#    Examples:
+#      | title                     | description        | status_code |
+#      | Issue with authentication | sample description | 201         |
+#
+#
+#  @Crud
+#  Scenario Outline: Reading and validating the gitlab issue output response
+#
+#    Given Setting up the request specification for gitlab issues api
+#    When  User creates new issue with "<title>" and "<description>"
+#    Then  Validate the <status_code> from output response
+#    And   Extract the response and store the issue_id
+#    And   Verify the "<title>" and "<description>" in output response
+#
+#    Examples:
+#      | title                     | description     | status_code |
+#      | Issue with authentication | new description | 201         |
+#
+#  @Crud
+#  Scenario Outline: Update or edit the values using gitlab issue Api
+#
+#    Given Setting up the request specification for gitlab issues api
+#    When  User update the existing issue "<title>" and "<description>"
+#    Then  Validate the <status_code> from output response
+#    And   Extract the response and store the issue_id
+#    And   Verify the "<title>" and "<description>" in output response
+#
+#    Examples:
+#      | title        | description        | status_code |
+#      | UpdatedTitle | UpdatedDescription | 200         |
+#
+#
+#  @Crud
+#  Scenario Outline: Verify the delete functionality of gitlab issue api
+#
+#    Given Setting up the request specification for gitlab issues api
+#    When  User deletes the existing gitlab issue
+#    Then  Validate the <status_code> from output response
+#
+#
+#    Examples:
+#      | status_code |
+#      | 403         |
+
+#  @EdgeCase
+#  Scenario Outline: Verify move an issue functionality using Gitlab Api
+#
+#    Given Setting up the request specification for gitlab issues api
+#    When  User moves an issue to "<new_project_id>"
+#    Then  Validate the <status_code> from output response
+#    Examples:
+#      | status_code | new_project_id|
+#      | 400         |44118659|
 
 
-
-
-  #Oauth Token
-  #base url in Create issue
-  #Title is dynamic we can create random string
-  #validate 201
-  #Check different error codes
-  #Issue IId is the ouptput can be generic
-
-  @Regression
-  Scenario Outline: Create new issue in gitlab using API
+  @EdgeCase
+  Scenario Outline: Verify clone functionality in Gitlab issues Api
 
     Given Setting up the request specification for gitlab issues api
-    When  User creates new issue with "<title>" and "<description>"
-    Then  Validate the <status_code> from output respose
-    And   Extract the response and store the issueid
+    When  User clone the issue with "<notes>" and "<new_project_id>"
+    Then  Validate the <status_code> from output response
 
     Examples:
-      | title                     | description | status_code |
-      | Issue with authentication | sample description   | 201         |
-
-
-  @Regression
-  Scenario Outline: Reading and validating the gitlab issue output response
-
-    Given Setting up the request specification for gitlab issues api
-    When  User creates new issue with "<title>" and "<description>"
-    Then  Validate the <status_code> from output respose
-    And   Extract the response and store the issueid
-    And   Verify the "<title>" and "<description>" in output response
-
-    Examples:
-      | title                     | description | status_code |
-      | Issue with authentication | new description   | 201         |
+      | status_code | new_project_id | notes |
+      | 400         | 44118659       | true  |
 
 
 
