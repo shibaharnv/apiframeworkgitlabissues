@@ -1,24 +1,32 @@
 package utilities;
 
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
+import javax.mail.Authenticator;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.Multipart;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 
-public class Email {
+public class Email{
+
 
 
     public static String Reporturl;
 
 
-    private static void readTextfile() throws IOException {
+    static void readTextfile() throws IOException {
 
-        FileReader fr = new FileReader(System.getProperty("user.dir") + "/src/test/java/logs/logs.txt");
+        FileReader fr = new FileReader(System.getProperty("user.dir") + "/mavenlogs.txt");
+        System.out.println(System.getProperty("user.dir"));
         BufferedReader br = new BufferedReader(fr);
         String str;
         while ((str = br.readLine()) != null) {
@@ -37,55 +45,35 @@ public class Email {
 
     }
 
-    public static void emailTrigger(String recipient) throws IOException {
+    public static void emailTrigger(String recipient) throws IOException  {
 
-        readTextfile();
-        // Create object of Property file
+
+        final String fromEmail = "simpuudemy@gmail.com"; //requires valid gmail id
+        final String password = "akdyrvmfbzxcxncv"; // correct password for gmail id
+
         Properties props = new Properties();
+        props.put("mail.smtp.host", "smtp.gmail.com"); //SMTP Host
+        props.put("mail.smtp.port", "587"); //TLS Port
+        props.put("mail.smtp.auth", "true"); //enable authentication
+        props.put("mail.smtp.starttls.enable", "true"); //enable STARTTLS
 
-        // this will set host of server- you can change based on your requirement
-        props.put("mail.smtp.host", "smtp.gmail.com");
 
-        // set the port of socket factory
-        props.put("mail.smtp.socketFactory.port", "465");
 
-        // set socket factory
-        props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
+        //create Authenticator object to pass in Session.getInstance argument
+        Authenticator auth = new Authenticator() {
+            //override the getPasswordAuthentication method
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(fromEmail, password);
+            }
+        };
+        Session session = Session.getInstance(props, auth);
 
-        // set the authentication to true
-        props.put("mail.smtp.auth", "true");
 
-        // set the port of SMTP server
-        props.put("mail.smtp.port", "465");
-
-        // This will handle the complete authentication
-        Session session = Session.getDefaultInstance(props,
-
-                new javax.mail.Authenticator() {
-
-                    protected PasswordAuthentication getPasswordAuthentication() {
-
-                        return new PasswordAuthentication("shibaharautomation@gmail.com", "dayawqeeisdvwkmv");
-
-                    }
-
-                });
-
-        try {
-
+        try
+        {
+            readTextfile();
             // Create object of MimeMessage class
             Message message = new MimeMessage(session);
-
-            // Set the from address
-            message.setFrom(new InternetAddress("simpuudemy@gmail.com"));
-
-            // Set the recipient address
-            message.setRecipients(Message.RecipientType.TO,InternetAddress.parse(recipient));
-
-            // Add the subject link
-            message.setSubject("Restful-booker-api Automation Report");
-
-
 
             BodyPart messageBodyPart1 = new MimeBodyPart();
 
@@ -112,22 +100,30 @@ public class Email {
             multipart.addBodyPart(messageBodyPart1);
             multipart.addBodyPart(messageBodyPart2);
             multipart.addBodyPart(messageBodyPart3);
-
+            message.setSubject("Gitlab issues Api Automation Report");
             message.setContent(multipart);
 
+            //****************
 
-            // finally send the email
+            message.setFrom(new InternetAddress("no_reply@automation.com", "Noreply-Automation"));
+
+            message.setReplyTo(InternetAddress.parse("no_reply@automation.com", false));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipient, false));
+            System.out.println("Message is ready");
             Transport.send(message);
 
-            System.out.println("=====Email Sent=====");
-
-        } catch (MessagingException e) {
-
-            throw new RuntimeException(e);
-
+            System.out.println("EMail Sent Successfully!!");
         }
-
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
 }
+
+
+
+
+
+

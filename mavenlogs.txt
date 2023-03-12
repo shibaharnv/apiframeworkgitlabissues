@@ -1,17 +1,43 @@
-Request method:	POST
-Request URI:	https://gitlab.com/api/v4/projects/44118042/issues?title=nbaklbhmgk&description=enlbhnefgl
-Proxy:			<none>
-Request params:	<none>
-Query params:	title=nbaklbhmgk
-				description=enlbhnefgl
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
-				Accept=*/*
-				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.abnamro:abn-qa-backend-assingment:jar:1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.sun.mail:javax.mail:jar -> version 1.5.5 vs 1.6.2 @ line 109, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.fasterxml.jackson.core:jackson-databind:jar -> version 2.13.3 vs 2.13.4 @ line 184, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.json:json:jar -> duplicate declaration of version 20220320 @ line 191, column 21
+[WARNING] 'dependencies.dependency.version' for junit:junit:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 199, column 22
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: junit:junit:jar -> version 4.13.2 vs RELEASE @ line 196, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------< com.abnamro:abn-qa-backend-assingment >----------------
+[INFO] Building abn-qa-backend-assingment 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ abn-qa-backend-assingment ---
+[INFO] skip non existing resourceDirectory /Users/shibahar/IdeaProjects/abn-qa-backend-assingment/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ abn-qa-backend-assingment ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /Users/shibahar/IdeaProjects/abn-qa-backend-assingment/target/classes
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ abn-qa-backend-assingment ---
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ abn-qa-backend-assingment ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/shibahar/IdeaProjects/abn-qa-backend-assingment/target/test-classes
+[INFO] 
+[INFO] --- surefire:3.0.0-M3:test (default-test) @ abn-qa-backend-assingment ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running cucumber.Options.TestRunner
+This is set up method.
 HTTP/1.1 201 Created
 Date: Sun, 12 Mar 2023 05:12:28 GMT
 Content-Type: application/json
@@ -108,20 +134,7 @@ CF-RAY: 7a698ad7ac76b7dc-AMS
     "moved_to_id": null,
     "service_desk_reply_to": null
 }
-Request method:	POST
-Request URI:	https://gitlab.com/api/v4/projects/44118042/issues?title=Issue%20with%20authentication&description=sample%20description
-Proxy:			<none>
-Request params:	<none>
-Query params:	title=Issue with authentication
-				description=sample description
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
-				Accept=*/*
-				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
+iid 136
 HTTP/1.1 201 Created
 Date: Sun, 12 Mar 2023 05:12:29 GMT
 Content-Type: application/json
@@ -218,20 +231,7 @@ CF-RAY: 7a698ade6e0eb945-AMS
     "moved_to_id": null,
     "service_desk_reply_to": null
 }
-Request method:	POST
-Request URI:	https://gitlab.com/api/v4/projects/44118042/issues?title=Issue%20with%20authentication&description=new%20description
-Proxy:			<none>
-Request params:	<none>
-Query params:	title=Issue with authentication
-				description=new description
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
-				Accept=*/*
-				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
+iid 137
 HTTP/1.1 201 Created
 Date: Sun, 12 Mar 2023 05:12:30 GMT
 Content-Type: application/json
@@ -328,19 +328,8 @@ CF-RAY: 7a698ae38aafb766-AMS
     "moved_to_id": null,
     "service_desk_reply_to": null
 }
-Request method:	PUT
-Request URI:	https://gitlab.com/api/v4/projects/44118042/issues/138?title=UpdatedTitle&description=UpdatedDescription
-Proxy:			<none>
-Request params:	<none>
-Query params:	title=UpdatedTitle
-				description=UpdatedDescription
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
-				Accept=*/*
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
+iid 138
+Assertion Passed
 HTTP/1.1 200 OK
 Date: Sun, 12 Mar 2023 05:12:31 GMT
 Content-Type: application/json
@@ -438,18 +427,8 @@ Content-Encoding: gzip
     "moved_to_id": null,
     "service_desk_reply_to": null
 }
-Request method:	DELETE
-Request URI:	https://gitlab.com/api/v4/projects/44118042/issues/138
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
-				Accept=*/*
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
+iid 138
+Assertion Passed
 HTTP/1.1 403 Forbidden
 Date: Sun, 12 Mar 2023 05:12:31 GMT
 Content-Type: application/json
@@ -481,19 +460,7 @@ CF-RAY: 7a698aedbd98b761-AMS
 {
     "message": "403 Forbidden"
 }
-Request method:	POST
-Request URI:	https://gitlab.com/api/v4/projects/44118042/issues/138/unsubscribe
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
-				Accept=*/*
-				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
+/unsubscribe
 HTTP/1.1 201 Created
 Date: Sun, 12 Mar 2023 05:12:32 GMT
 Content-Type: application/json
@@ -590,19 +557,7 @@ CF-RAY: 7a698aef8cdc1b03-AMS
     "moved_to_id": null,
     "service_desk_reply_to": null
 }
-Request method:	POST
-Request URI:	https://gitlab.com/api/v4/projects/44118042/issues/138/subscribe
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
-				Accept=*/*
-				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
+/subscribe
 HTTP/1.1 201 Created
 Date: Sun, 12 Mar 2023 05:12:32 GMT
 Content-Type: application/json
@@ -699,23 +654,7 @@ CF-RAY: 7a698af229f5b984-AMS
     "moved_to_id": null,
     "service_desk_reply_to": null
 }
-Request method:	POST
-Request URI:	https://gitlab.com/api/v4/projects/44118042/issues/138/move
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
-				Accept=*/*
-				Content-Type=multipart/form-data
-Cookies:		<none>
-Multiparts:		------------
-				Content-Disposition: form-data; name = to_project_id; filename = file
-				Content-Type: text/plain
-
-				44118659
-Body:			<none>
+/move
 HTTP/1.1 400 Bad Request
 Date: Sun, 12 Mar 2023 05:12:33 GMT
 Content-Type: application/json
@@ -747,20 +686,7 @@ CF-RAY: 7a698af62cd10be5-AMS
 {
     "message": "Cannot move issue due to insufficient permissions!"
 }
-Request method:	POST
-Request URI:	https://gitlab.com/api/v4/projects/44118042/issues/138/clone?with_notes=true&to_project_id=44118659
-Proxy:			<none>
-Request params:	<none>
-Query params:	with_notes=true
-				to_project_id=44118659
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer glpat-c1noKX73-C_-6z7BbKxi
-				Accept=*/*
-				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
+/clone
 HTTP/1.1 400 Bad Request
 Date: Sun, 12 Mar 2023 05:12:33 GMT
 Content-Type: application/json
@@ -792,3 +718,58 @@ CF-RAY: 7a698af7e9df1e99-AMS
 {
     "message": "Cannot clone issue due to insufficient permissions!"
 }
+[32m[1m┌──────────────────────────────────────────────────────────────────────────┐[0m
+[32m[1m│[0m View your Cucumber Report at:                                            [32m[1m│[0m
+[32m[1m│[0m [1m[36m[4mhttps://reports.cucumber.io/reports/210c3087-e83f-43fc-947e-3d52ebdae09e[0m [32m[1m│[0m
+[32m[1m│[0m                                                                          [32m[1m│[0m
+[32m[1m│[0m [1mThis report will self-destruct in 24h.[0m                                   [32m[1m│[0m
+[32m[1m│[0m Keep reports forever: [4m[1m[36mhttps://reports.cucumber.io/profile[0m                [32m[1m│[0m
+[32m[1m└──────────────────────────────────────────────────────────────────────────┘[0mshibaharn@gmail.com
+TLSEmail Start
+/Users/shibahar/IdeaProjects/abn-qa-backend-assingment
+Reporturl :https://reports.cucumber.io/reports/210c3087-e83f-43fc-947e-3d52ebdae09e
+Message is ready
+EMail Sent Successfully!!
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.237 s - in cucumber.Options.TestRunner
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- surefire:3.0.0-M3:test (default) @ abn-qa-backend-assingment ---
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ abn-qa-backend-assingment ---
+[INFO] skip non existing resourceDirectory /Users/shibahar/IdeaProjects/abn-qa-backend-assingment/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ abn-qa-backend-assingment ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /Users/shibahar/IdeaProjects/abn-qa-backend-assingment/target/classes
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ abn-qa-backend-assingment ---
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ abn-qa-backend-assingment ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/shibahar/IdeaProjects/abn-qa-backend-assingment/target/test-classes
+[INFO] 
+[INFO] --- surefire:3.0.0-M3:test (default-test) @ abn-qa-backend-assingment ---
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO] 
+[INFO] --- surefire:3.0.0-M3:test (default) @ abn-qa-backend-assingment ---
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ abn-qa-backend-assingment ---
+[INFO] Building jar: /Users/shibahar/IdeaProjects/abn-qa-backend-assingment/target/abn-qa-backend-assingment-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- cucumber-reporting:5.0.0:generate (execution) @ abn-qa-backend-assingment ---
+[INFO] About to generate Cucumber report.
+Mar 12, 2023 6:12:36 AM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFO: File '/Users/shibahar/IdeaProjects/abn-qa-backend-assingment/target/jsonReports/cucumber-report.json' contains 1 features
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.680 s
+[INFO] Finished at: 2023-03-12T06:12:36+01:00
+[INFO] ------------------------------------------------------------------------

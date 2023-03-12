@@ -1,4 +1,4 @@
-package Base;
+package base;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.List;
 import java.util.Properties;
+import java.util.Random;
 
 
 public class Utils {
@@ -58,11 +59,15 @@ public class Utils {
     }
 
 
-    public List getJsonPathList(String inputResponse, String keylist) {
-        JsonPath js2 = new JsonPath(inputResponse);
-        List jsonValueList = js2.getList(keylist);
-        return jsonValueList;
-
+    public static String randomStringGeneration() {
+        Random robj = new Random();
+        String alphabets = "abcdefghijklmnopqrstuvwxyz";
+        String newWord = "";
+        for (int i = 0; i < 10; i++) {
+            char c = alphabets.charAt(robj.nextInt(15));
+            newWord = newWord + c;
+        }
+        return newWord;
     }
 
 }
